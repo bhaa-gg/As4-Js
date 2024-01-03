@@ -1,0 +1,41 @@
+a {
+    text-decoration: none;
+    color: rgb(117, 117, 207) !important;
+
+}
+
+a:hover {
+    color: white !important;
+}
+
+body {
+    background-color: #24353F;
+}
+
+.logC {
+    background-color: #24353F !important;
+    border: 3px white solid;
+    box-shadow: 1px 2px 42px 13px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 1px 2px 42px 13px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 1px 2px 42px 13px rgba(255, 255, 255, 0.75);
+    width: 75%;
+    margin-top: 7% !important;
+}
+
+h1 {
+    color: rgb(117, 117, 207);
+}
+
+p {
+    color: rgb(117, 117, 207);
+}
+
+.fa-regular {
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    .logC {
+        width: 90% !important;
+        padding: 10px !important;
+    }
+}

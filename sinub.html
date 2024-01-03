@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+    <section>
+        <div class="logC w-75 m-auto  mt-5 text-center p-5 d-flex flex-column row-gap-3 bg-secondary">
+            <h1>Smart Login System </h1>
+            <input id="loginNmae"  class="form-control" type="text" placeholder="Enter Name">
+            <p id="pName" class="d-none">Eror Name</p>
+            <input id="loginEmail" class="form-control" type="email" placeholder="Enter Email">
+            <p id="pEmail" class="d-none">Eror Email</p>
+            <input id="loginPassword" class="form-control" type="password" placeholder="Enter password">
+            <p id="pPass" class="d-none ">Eror pass</p>
+            <p id="pAll" class="d-none">There is Exsist</p>
+            <button id="puch" onclick="puchdata()" class="btn btn-outline-info w-100">Sign Up</button>
+            <p class="pt-2">Don’t have an account? <a href="index.html" class="">Sign In</a></p>
+            
+            <a href="index.html"><button id="SignIn" class="btn btn-outline-warning w-25 m-auto d-none">Sign In</button></a>
+        </div>
+
+
+        <script src="java/bootstrap.bundle.js"></script>
+        <script src="index.js"></script>
+</body>
+
+</html>
