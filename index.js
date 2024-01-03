@@ -141,33 +141,39 @@ function Login() {
 
     else {
         document.getElementById("emt").classList.replace("d-block", "d-none");
-        for (let i = 0; i < dataArray.length; i++) {
-            if (dataArray[i].email.toLowerCase() === sinName.value.toLowerCase() && dataArray[i].password.toLowerCase() === sinPass.value.toLowerCase()) {
-                sinName.classList.remove("is-invalid");
-                sinName.classList.add("is-valid");
-                sinPass.classList.remove("is-invalid");
-                sinPass.classList.add("is-valid");
-                document.getElementById("psin").classList.replace("d-block", "d-none");
-                username = dataArray[i].name;
-                localStorage.setItem("name", JSON.stringify(username));
-                window.location.href = "logout.html";
-            }
-            else {
+        if (dataArray.length == 0) {
+            console.log("eroe");
+            document.getElementById("psin").classList.replace("d-none", "d-block");
+        }
+        else {
+            for (let i = 0; i < dataArray.length; i++) {
+                if (dataArray[i].email.toLowerCase() === sinName.value.toLowerCase() && dataArray[i].password.toLowerCase() === sinPass.value.toLowerCase()) {
+                    sinName.classList.remove("is-invalid");
+                    sinName.classList.add("is-valid");
+                    sinPass.classList.remove("is-invalid");
+                    sinPass.classList.add("is-valid");
+                    document.getElementById("psin").classList.replace("d-block", "d-none");
+                    username = dataArray[i].name;
+                    localStorage.setItem("name", JSON.stringify(username));
+                    window.location.href = "logout.html";
+                }
+                else {
 
-                sinName.classList.remove("is-valid");
-                sinName.classList.add("is-invalid");
-                sinPass.classList.remove("is-valid");
-                sinPass.classList.add("is-invalid");
-                document.getElementById("psin").classList.replace("d-none", "d-block");
-            }
+                    sinName.classList.remove("is-valid");
+                    sinName.classList.add("is-invalid");
+                    sinPass.classList.remove("is-valid");
+                    sinPass.classList.add("is-invalid");
+                    document.getElementById("psin").classList.replace("d-none", "d-block");
+                }
 
+            }
         }
 
     }
 }
 function display() {
 
-    document.getElementById("block").innerHTML = `Hi ${username}`
+    document.getElementById("block").innerHTML = `Welocme ${username}`
 }
 
 function logOut() {
